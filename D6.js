@@ -49,17 +49,39 @@ console.log(numSum([30, 33, 36, 38, 41, 45, 52, 57, 60, 61]));
 */
 
 /* ESERCIZIO 6 (map)
-  Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
+  Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti
+   i valori del precedente incrementati di n
 */
+const num = (arrNum, n) => {
+  return arrNum.map((z) => z + n);
+};
+console.log(num([30, 33, 36, 38, 41, 45, 52, 57, 60, 61], 5));
 
 /* ESERCIZIO 7 (map)
-  Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
+  Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive 
+  stringhe dell'array di partenza
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
+
+const str = (arrStr) => {
+  return arrStr.map((x) => x.length);
+};
+console.log(str(["sono", "Caterina", "Munno"]));
 
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
+
+const numDispari = () => {
+  const numDispariArr = [];
+  for (let index = 1; index < 100; index++) {
+    if (index % 2 !== 0) {
+      numDispariArr.push(index);
+    }
+  }
+  return numDispariArr;
+};
+console.log(numDispari());
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
